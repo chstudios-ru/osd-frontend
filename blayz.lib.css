@@ -1,0 +1,188 @@
+/*  / ----------------------------------------------- \
+   | ---------------- Blayz lib File ---------------- | 
+   \ ----------------------------------------------- /   */
+
+html{/* variables */
+/* colors */
+    /* defaults */
+        --color-red:#ff0000;
+        --color-green:#00FF00;
+        --color-blue:#0000FF;
+        --color-orange:#ffa500;
+        --color-yellow:#ffff00;
+        --color-pink:#ff00ff;
+        --color-purple:#800080;
+        --color-gray:#808080;
+        --color-bgray:#111;
+        --color-black:#000;
+        --color-white:#fff;
+        /* for tasks */
+            --color-text:var(--color-bit-white);
+            --color-background:var(--color-bit-gray);
+            --color-wanimated-rgb:244,244,244;
+            
+    /* pastel | by: https://lospec.com/palette-list/sulu */
+        --color-pastel-red:#ee70b5;
+        --color-pastel-orange:#eeb570;
+        --color-pastel-yellow:#ecffbc;
+        --color-pastel-green:#b5ee70;
+        --color-pastel-blue:#70b5ee;
+        --color-pastel-cyan:#70eeb5;
+        --color-pastel-pink:#ffbcec;
+        --color-pastel-purple:#b570ee;
+        --color-pastel-gray:#474751;
+        --color-pastel-white:#babad3;
+
+        --color-pastel-worange:#ffecbc;
+        --color-pastel-wblue:#bcecff;
+        --color-pastel-wcyan:#bcffec;
+        --color-pastel-wpurple:#ecbcff;
+        --color-pastel-wgray:#8e8ea3;
+        --color-pastel-wwhite:#e3e3f2;
+
+    /* bit | by: https://lospec.com/palette-list/sweetie-16 */
+        --color-bit-red:#b13e53;
+        --color-bit-orange:#ef7d57;
+        --color-bit-yellow:#ffcd75;
+        --color-bit-green:#38b764;
+        --color-bit-blue:#29366f;
+        --color-bit-sblue:#41a6f6;
+        --color-bit-cyan:#257179;
+        --color-bit-purple:#5d275d;
+        --color-bit-gray:#1a1c2c;
+        --color-bit-white:#f4f4f4;
+
+        --color-bit-wgreen:#a7f070;
+        --color-bit-wblue:#3b5dc9;
+        --color-bit-wsblue:#73eff7;
+        --color-bit-wgray:#333c57;
+        --color-bit-wwgray:#566c86;
+        --color-bit-wwwgray:#94b0c2;
+/* pixels */
+    --micro: 40px;
+    --mini: 80px;
+    --small: 160px;
+    --def: 320px;
+    --big: 640px;
+    --fpg: 1280px;
+}
+
+*{/* data-entry */
+    /* fonts */
+        &[font*="10"]{font-size: 10px}
+        &[font*="20"]{font-size: 20px}
+        &[font*="40"]{font-size: 40px}
+        &[font*="60"]{font-size: 60px}
+        &[font*="bold"]{font-weight: 800}
+        &[font*="medbold"]{font-weight: 600}
+        &[font*="default"]{font-weight: 400}
+        &[font*="animated"] {font-weight: 400;
+            &[font*="medbold"] {animation: animedbold 1s forwards;}
+            &[font*="bold"] {animation: anibold 1s forwards;}
+        }
+
+    /* colors */
+        /* defaults */
+            &[font*="text"]{color:var(--color-text)}
+            &[font*="bg"]{color:var(--color-background)}
+        /* dflt html colors */
+            &[font*="red"]{color:var(--color-red)}
+            &[font*="green"]{color:var(--color-green)}
+            &[font*="blue"]{color:var(--color-blue)}
+            &[font*="orange"]{color:var(--color-orange)}
+            &[font*="yellow"]{color:var(--color-yellow)}
+            &[font*="pink"]{color:var(--color-pink)}
+            &[font*="purple"]{color:var(--color-purple)}
+            &[font*="gray"]{color:var(--color-gray)}
+            &[font*="bgray"]{color:var(--color-bgray)}
+            &[font*="black"]{color:var(--color-black)}
+            &[font*="white"]{color:var(--color-white)}
+
+        /* pastel colors */
+            &[font*="pastel-red"]{color:var(--color-pastel-red)}
+            &[font*="paste-green"]{color:var(--color-pastel-green)}
+            &[font*="pastel-blue"]{color:var(--color-pastel-blue)}
+            &[font*="pastel-orange"]{color:var(--color-pastel-orange)}
+            &[font*="pastel-yellow"]{color:var(--color-pastel-yellow)}
+            &[font*="pastel-cyan"]{color:var(--color-pastel-cyan)}
+            &[font*="pastel-pink"]{color:var(--color-pastel-pink)}
+            &[font*="pastel-purple"]{color:var(--color-pastel-purple)}
+            &[font*="pastel-gray"]{color:var(--color-pastel-gray)}
+            &[font*="pastel-white"]{color:var(--color-pastel-white)}
+
+            &[font*="pastel-worange"]{color:var(--color-pastel-worange)}
+            &[font*="pastel-wblue"]{color:var(--color-pastel-wblue)}
+            &[font*="pastel-wcyan"]{color:var(--color-pastel-wcyan)}
+            &[font*="pastel-wpurple"]{color:var(--color-pastel-wpurple)}
+            &[font*="pastel-wgray"]{color:var(--color-pastel-wgray)}
+            &[font*="pastel-wwhite"]{color:var(--color-pastel-wwhite)}
+
+        /* bit colors */
+            &[font*="bit-red"]{color:var(--color-bit-red)}
+            &[font*="bit-green"]{color:var(--color-bit-green)}
+            &[font*="bit-blue"]{color:var(--color-bit-blue)}
+            &[font*="bit-orange"]{color:var(--color-bit-orange)}
+            &[font*="bit-yellow"]{color:var(--color-bit-yellow)}
+            &[font*="bit-purple"]{color:var(--color-bit-purple)}
+            &[font*="bit-gray"]{color:var(--color-bit-gray)}
+
+            &[font*="bit-wgreen"]{color:var(--color-bit-wgreen)}
+            &[font*="bit-wblue"]{color:var(--color-bit-wblue)}
+            &[font*="bit-wgray"]{color:var(--color-bit-wgray)}
+            &[font*="bit-wwgray"]{color:var(--color-bit-wwgray)}
+            &[font*="bit-wwwgray"]{color:var(--color-bit-wwwgray)}
+            &[font*="bit-white"]{color:var(--color-bit-white)}
+    
+    /* size */
+        &[size="micro"]{height:auto;width:var(--micro);}
+        &[size="mini"]{height:auto;width:var(--mini);}
+        &[size="small"]{height:auto;width:var(--small);}
+        &[size="def"]{height:auto;width:var(--def);}
+        &[size="big"]{height:auto;width:var(--big);}
+        &[size="fpg"]{height:auto;width:var(--fpg);}
+        
+}
+
+html{/* styles */
+    body{height: 100%;scroll-behavior: smooth;overflow: hidden;
+
+    /* default colors */
+        background-color:var(--color-background);
+        color: var(--color-text);
+
+    /* default fonts */
+        font-family: "Montserrat", sans-serif;
+        header{font-size:20px;font-optical-sizing:auto;font-weight:400;font-style:normal;};
+        main{font-size:40px;}
+    }
+
+    header {
+        position:fixed;left:0;width:100%;z-index:1000;display: flex;
+        justify-content: space-between;align-items: center;
+        padding: 10px 30px; box-sizing: border-box;
+        #logo{--width:34px;display:block;svg{width: 100%;height:auto;max-width:var(--width);stroke:var(--color-bit-white);stroke-miterlimit: 10;stroke-width: 160px;fill: none;}}
+        #profile{--width:44.3px;display:block;svg{fill:var(--color-bit-white);width: 100%;height:auto;max-width:var(--width);}}
+        #logo,#profile {a svg{transition: transform 0.3s ease;}}
+        #logo,#profile {a svg:hover{transform: scale(1.10);}}
+        #links{display: flex;justify-content: center;align-items: center;}
+        #links a{margin:1rem;text-decoration: none;color: inherit;transition: font-weight 0.3s ease;}
+        #links a:hover{font-weight: 600;}
+    }
+}
+
+/* animations */
+@keyframes animedbold {to { font-weight: 600;}}
+@keyframes anibold {to { font-weight: 800; }}
+
+/* fonts */
+@font-face {
+    font-family: 'Space';
+    src: url('/static/fonts/project-space.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.space{
+    font-family: "Space", sans-serif;
+    &[size="bigger"]{font-size: 40px};
+    &[size="lower"]{font-size: 30px};
+}
