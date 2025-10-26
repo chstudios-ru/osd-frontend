@@ -173,16 +173,3 @@ html{/* styles */
 /* animations */
 @keyframes animedbold {to { font-weight: 600;}}
 @keyframes anibold {to { font-weight: 800; }}
-
-/* fonts */
-@font-face {
-    font-family: 'Space';
-    src: url('/static/fonts/project-space.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-.space{
-    font-family: "Space", sans-serif;
-    &[size="bigger"]{font-size: 40px};
-    &[size="lower"]{font-size: 30px};
-}
