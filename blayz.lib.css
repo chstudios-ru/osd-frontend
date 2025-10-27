@@ -100,7 +100,7 @@ html{/* variables */
 
         /* pastel colors */
             &[font*="pastel-red"]{color:var(--color-pastel-red)}
-            &[font*="paste-green"]{color:var(--color-pastel-green)}
+            &[font*="pastel-green"]{color:var(--color-pastel-green)}
             &[font*="pastel-blue"]{color:var(--color-pastel-blue)}
             &[font*="pastel-orange"]{color:var(--color-pastel-orange)}
             &[font*="pastel-yellow"]{color:var(--color-pastel-yellow)}
